@@ -19,10 +19,10 @@ variables:
     - scp -i $ID_RSA -o StrictHostKeyChecking=no ./.env_prepare  $DEPLOY_USER@$DEPLOY_SERVER:~/$CI_PROJECT_NAME/$CI_COMMIT_REF_NAME/.env
     - scp -i $ID_RSA -o StrictHostKeyChecking=no ./$DC_FILE  $DEPLOY_USER@$DEPLOY_SERVER:~/$CI_PROJECT_NAME/$CI_COMMIT_REF_NAME
     - ssh -i $ID_RSA -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY"
-    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "cd ~/$CI_PROJECT_NAME/$CI_COMMIT_REF_NAME/ && docker-compose -f $DC_FILE  goalem_front"
-    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "docker container rm -f  goalem_front || true"
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "cd ~/$CI_PROJECT_NAME/$CI_COMMIT_REF_NAME/ && docker-compose -f $DC_FILE  pull goalem-landing"
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "docker container rm -f  goalem-landing || true"
     - ssh -i $ID_RSA -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "docker network create goalem || true"
-    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "cd ~/$CI_PROJECT_NAME/$CI_COMMIT_REF_NAME/ && docker-compose -f $DC_FILE up -d goalem_front"
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "cd ~/$CI_PROJECT_NAME/$CI_COMMIT_REF_NAME/ && docker-compose -f $DC_FILE up -d goalem-landing"
 
 
 docker-build-prod:
