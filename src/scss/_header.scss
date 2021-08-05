@@ -1,0 +1,207 @@
+@import "variables";
+.header {
+  // position: relative;
+  //   width: 100%;
+  //   z-index: 999;
+  background: #fff;
+  &-in {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    &.active {
+      border-bottom: 1px solid #e1e1e1;
+    }
+    @media (max-width: 1200px) {
+      padding: 12px 0px;
+    }
+  }
+  .burger {
+    display: flex;
+    flex-direction: column;
+    height: 16px;
+    justify-content: space-between;
+    cursor: pointer;
+    div {
+      height: 2px;
+      background: $main-color;
+    }
+    div:nth-child(1) {
+      width: 32px;
+    }
+    div:nth-child(2) {
+      width: 32px;
+      margin-left: auto;
+      transition: 0.2s;
+    }
+    div:nth-child(3) {
+      width: 22px;
+      margin-left: auto;
+      transition: 0.2s;
+    }
+    &:hover div:nth-child(2) {
+      width: 22px;
+    }
+    &:hover div:nth-child(3) {
+      width: 32px;
+    }
+  }
+  //   .menu {
+  //     transform: translateX(-120%);
+  //     position: absolute;
+  //     background: #fff;
+  //     width: 100%;
+  //     height: 100%;
+  //     z-index: 9;
+  //     transition: 0.8s;
+  //     .container {
+  //       height: 100%;
+  //       display: flex;
+  //       justify-content: center;
+  //       align-items: center;
+  //       position: relative;
+  //       img {
+  //         position: absolute;
+  //         top: 35px;
+  //         right: 15px;
+  //         cursor: pointer;
+  //         transition: 0.2s;
+  //         &:hover {
+  //           transform: rotate(90deg);
+  //         }
+  //         @media (max-width: 1480px) {
+  //           right: 30px;
+  //         }
+  //         @media (max-width: 1200px) {
+  //           top: 25px;
+  //         }
+  //       }
+  //     }
+  //     &-in {
+  //       li {
+  //         @include font-bold;
+  //         font-size: 24px;
+  //         line-height: 40px;
+  //         margin-bottom: 70px;
+  //         text-align: center;
+  //         cursor: pointer;
+  //         color: $main-color;
+  //         &:last-child {
+  //           margin-bottom: 0;
+  //         }
+  //         @media (max-width: 1480px) {
+  //           font-size: 20px;
+  //           margin-bottom: 45px;
+  //         }
+  //         @media (max-width: 767px) {
+  //           font-size: 16px;
+  //           margin-bottom: 32px;
+  //         }
+  //       }
+  //     }
+  //     &.active {
+  //       transform: translateX(0);
+  //     }
+  //   }
+  .logo {
+    z-index: 99;
+    cursor: pointer;
+    &.active {
+      margin-left: auto;
+    }
+    img {
+      @media (max-width: 767px) {
+        width: 120px;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    padding: 0 15px;
+  }
+}
+
+.menu {
+  transform: translateX(-120%);
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  // transition: 0.8s;
+  top: 0;
+  .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .close-menu {
+      position: absolute;
+      top: 25px;
+      right: 15px;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        transform: rotate(90deg);
+      }
+      //   @media (max-width: 1480px) {
+      //     right: 30px;
+      //   }
+      @media (max-width: 1200px) {
+        top: 25px;
+        right: 30px;
+      }
+    }
+  }
+  &-in {
+    li {
+      @include font-bold;
+      font-size: 24px;
+      line-height: 40px;
+      margin-bottom: 70px;
+      text-align: center;
+      cursor: pointer;
+      color: $main-color;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @media (max-width: 1480px) {
+        font-size: 20px;
+        margin-bottom: 45px;
+      }
+      @media (max-width: 767px) {
+        font-size: 16px;
+        margin-bottom: 32px;
+      }
+    }
+  }
+  &.active {
+    transform: translateX(0);
+  }
+  .logo {
+    top: 20px;
+    position: absolute;
+    left: 50px;
+    z-index: 9999;
+    width: 120px;
+    cursor: pointer;
+    @media (max-width: 1200px) {
+      top: 17px;
+      left: 20px;
+    }
+
+    img {
+      @media (max-width: 767px) {
+        width: 120px;
+      }
+    }
+  }
+  &.transition {
+    transition: 0.8s;
+  }
+}

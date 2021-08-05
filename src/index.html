@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="index.css" />
+	<link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/fav/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/fav/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/fav/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/fav/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/fav/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/fav/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/fav/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/fav/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="img/fav/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/fav/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+	<link rel="manifest" href="img/fav/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="img/fav/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<title>GOALem</title>
+</head>
+
+<body>
+	@@include('parts/desc-vacancies.html')
+	<div class="menu">
+		<div class="container">
+			<div class="logo">
+				<img src="./img/logo.svg" alt="logo" />
+			</div>
+			<img src="./img/close-icon.svg" alt="close" class="close-menu" />
+			<div class="menu-in">
+				<ul>
+					<li data-index="0" id="one">ГЛАВНАЯ</li>
+					<li data-index="1" id="two">НАШИ РЕЗУЛЬТАТЫ</li>
+					<li data-index="2" id="three">
+						ГРАФИК РАЗВИТИЯ ПРОЕКТА
+					</li>
+					<li data-index="3" id="four">ВАКАНСИИ</li>
+					<li data-index="4" id="five">КОНТАКТЫ</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="header">
+
+			<div class="container">
+				<div class="header-in">
+					<div class="logo">
+						<img src="./img/logo.svg" alt="logo" />
+					</div>
+					<div class="burger">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class="container"> -->
+		<div id="home-slider" class="responsive-swiper-holder">
+			<!-- <div class="responsive-swiper-shiv"></div> -->
+
+			<div class="swiper-container ">
+				<div class="swiper-wrapper container hid">
+					<div class="swiper-slide swiper-slide-one" id="one-slide">
+						<div class="swiper-image" data-swiper-parallax-y="-35%" data-swiper-parallax-duration="600">
+							@@include('parts/hero.html')
+						</div>
+					</div>
+					<div class="swiper-slide swiper-slide-two" id="two-slide">
+						<div class="swiper-image" data-swiper-parallax-y="-35%" data-swiper-parallax-duration="600">
+							@@include('parts/result.html')
+						</div>
+					</div>
+					<div class="swiper-slide swiper-slide-three" id="three-slide">
+						<div class="swiper-image" data-swiper-parallax-y="-35%" data-swiper-parallax-duration="600">
+							@@include('parts/develop.html')
+						</div>
+					</div>
+					<div class="swiper-slide swiper-slide-four" id="four-slide">
+						<div class="swiper-image" data-swiper-parallax-y="-20%" data-swiper-parallax-duration="600">
+							@@include('parts/vacancies.html')
+						</div>
+					</div>
+					<div class="swiper-slide swiper-slide-five" id="five-slide">
+						<div class="swiper-image" data-swiper-parallax-y="-20%" data-swiper-parallax-duration="600">
+							@@include('parts/contacts.html')
+						</div>
+					</div>
+
+				</div>
+				<div class="swiper-pagination"></div>
+
+			</div>
+		</div>
+		<!-- </div> -->
+
+		<div class="footer">
+			<div class="container">
+				<div class="footer-item">
+					<span class="title">Email:</span>
+					<a class="link email-link" href="mailto:info@goalem.solutions">info@goalem.solutions</a>
+					<a class="link-mob" href="mailto:info@goalem.solutions"><img src="./img/icon-mail-c.svg"
+							alt="icon"></a>
+
+				</div>
+				<div class="footer-item">
+					<span class="title">Телефон:</span>
+					<a class="link" href="tel:+380676668899">+38 (067) 666-88-99</a>
+					<a class="link-mob" href="tel:+380676668899"><img src="./img/icon-phone-c.svg" alt="icon"></a>
+				</div>
+				<div class="footer-item">
+					<span class="title">офис:</span>
+					<a href="https://www.google.com/maps/place/%D0%9F%D0%B5%D1%87%D0%B5%D1%80%D1%81%D0%BA%D0%B0%D1%8F/@50.4272737,30.5372093,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e13cda333:0x2c0225e22132109f!8m2!3d50.4272737!4d30.539398"
+						target="_blank" class="link">Украина, г. Киев, м. Печерская</a>
+					<a href="https://www.google.com/maps/place/%D0%9F%D0%B5%D1%87%D0%B5%D1%80%D1%81%D0%BA%D0%B0%D1%8F/@50.4272737,30.5372093,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e13cda333:0x2c0225e22132109f!8m2!3d50.4272737!4d30.539398"
+						class="link-mob" target="_blank"><img src="./img/icon-loc-c.svg" alt="icon"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.18.0/jquery.validate.min.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src=" https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.8.5/countUp.min.js"></script>
+
+
+	<script src="data.js"></script>
+	<script src="index.js"></script>
+
+</body>
+
+</html>

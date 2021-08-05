@@ -1,0 +1,58 @@
+stages:
+  - build-prod
+  - deploy-prod
+
+
+variables:
+  TAG_LATEST: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_NAME:latest
+  TAG_COMMIT: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_NAME:$CI_COMMIT_SHORT_SHA
+  DC_FILE: docker-compose.yml
+
+.ssh-deploy: &ssh-deploy
+  script:
+    - apk update && apk add openssh-client
+    - chmod og= $ID_RSA
+    - echo "IMAGE="$TAG_LATEST > .env_prepare
+    - echo "URL="$URL >> .env_prepare
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "mkdir -p ~/$CI_PROJECT_NAME"
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "mkdir -p ~/$CI_PROJECT_NAME/$CI_COMMIT_REF_NAME"
+    - scp -i $ID_RSA -o StrictHostKeyChecking=no ./.env_prepare  $DEPLOY_USER@$DEPLOY_SERVER:~/$CI_PROJECT_NAME/$CI_COMMIT_REF_NAME/.env
+    - scp -i $ID_RSA -o StrictHostKeyChecking=no ./$DC_FILE  $DEPLOY_USER@$DEPLOY_SERVER:~/$CI_PROJECT_NAME/$CI_COMMIT_REF_NAME
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY"
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "cd ~/$CI_PROJECT_NAME/$CI_COMMIT_REF_NAME/ && docker-compose -f $DC_FILE  goalem_front"
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "docker container rm -f  goalem_front || true"
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "docker network create goalem || true"
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "cd ~/$CI_PROJECT_NAME/$CI_COMMIT_REF_NAME/ && docker-compose -f $DC_FILE up -d goalem_front"
+
+
+docker-build-prod:
+  stage: build-prod
+  before_script:
+    - echo "Docker Login"
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - ID_RSA="$ID_RSA_PROD"
+    - ENV_FILE="$ENV_PROD"
+  script:
+    - echo "Build"
+    - docker build  -t $TAG_LATEST -f Dockerfile .
+  after_script:
+    - docker push $TAG_LATEST
+  only:
+    - master
+  tags:
+    - goalem-landing
+
+deploy-prod:
+  image: alpine:latest
+  stage: deploy-prod
+  before_script:
+    - ID_RSA=$ID_RSA_PROD
+    - DEPLOY_SERVER=$SERVER_PROD
+    - URL=$URL_PROD
+  << : *ssh-deploy
+  only:
+    - master
+  tags:
+    - goalem-landing
+
+

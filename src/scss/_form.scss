@@ -1,0 +1,369 @@
+.form {
+  max-width: 644px;
+  width: 100%;
+
+  &-input-wrap {
+    position: relative;
+    margin-bottom: 24px;
+    label {
+      position: absolute;
+      left: 26px;
+      top: -16px;
+      font-size: 12px;
+      line-height: 32px;
+      color: $main-color;
+      background: #fff;
+      padding: 0 7px;
+      @include font-reg;
+    }
+  }
+
+  input {
+    // max-width: 644px;
+    height: 56px;
+    width: 100%;
+    border: 1px solid #655377;
+    box-sizing: border-box;
+    padding: 12px 0 12px 16px;
+    font-size: 16px;
+    line-height: 32px;
+    color: #585858;
+    outline: none;
+    @media (max-width: 1480px) {
+      height: 48px;
+      font-size: 14px;
+    }
+  }
+  .policy {
+    margin: 32px 0;
+    font-size: 13px;
+    line-height: 32px;
+    color: #585858;
+    span {
+      @include font-bold;
+      color: $accent-color;
+      text-decoration: underline;
+      transition: 0.2s;
+    }
+    &:hover span {
+      text-decoration: none;
+    }
+    input {
+      height: 27px;
+    }
+    @media (max-width: 1480px) {
+      margin: 22px 0;
+    }
+    @media (max-width: 800px) {
+      line-height: 20px;
+      margin: 15px 0;
+    }
+  }
+  .input-file-wrap {
+    position: relative;
+
+    .btn-file-input {
+      max-width: 644px;
+      height: 56px;
+      width: 100%;
+      border: 1px solid #655377;
+      box-sizing: border-box;
+      padding: 12px 0 12px 16px;
+      font-size: 16px;
+      line-height: 32px;
+      color: #585858;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+  .btn {
+    background: #dedede;
+    border-radius: 8px;
+    @include font-bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #ffffff;
+    width: 247px;
+    height: 56px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.5;
+
+    pointer-events: none;
+    &.active {
+      pointer-events: initial;
+      opacity: 1;
+      background: $accent-color;
+      &:hover {
+        background: transparent;
+        color: $accent-color;
+        border: 1px solid $accent-color;
+      }
+    }
+    @media (max-width: 1480px) {
+      height: 40px;
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 1480px) {
+    max-width: 455px;
+  }
+  @media (max-width: 1200px) {
+    max-width: 100%;
+  }
+  @media (max-width: 767px) {
+    max-width: 100%;
+  }
+}
+
+/*-------file input --------*/
+
+input[type="file"] {
+  color: transparent;
+}
+
+.text-file {
+  position: absolute;
+  top: 20px;
+  left: 17px;
+  background: #fff;
+  height: 35px;
+  color: #585858;
+  z-index: -1;
+  @include font-semiBold;
+  @media (max-width: 1480px) {
+    height: 19px;
+    top: 15px;
+  }
+  @media (max-width: 1200px) {
+    z-index: 1;
+    top: 16px;
+    height: 20px;
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
+}
+.fileUploadInput input[type="file"] {
+  padding: 0 gap(m);
+}
+.fileUploadInput input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden;
+  margin-left: 10px;
+  padding: 0;
+  height: 56px;
+  width: 0px;
+}
+.fileUploadInput .btn-file {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: none;
+  position: absolute;
+  top: 50%;
+  right: -84px !important;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 184px;
+  height: 40px;
+  background: $accent-color;
+  border-radius: 8px;
+  @include font-reg;
+  font-size: 14px;
+  left: auto;
+  line-height: 0;
+  text-transform: uppercase;
+  color: #f5f5f5;
+  text-decoration: none;
+  display: flex;
+  z-index: -1;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 9;
+  transition: 0.2s;
+  svg {
+    margin-left: 20px;
+    margin-top: -3px;
+  }
+  @media (max-width: 1480px) {
+    width: 142px;
+    height: 36px;
+    right: -71px !important;
+  }
+  @media (max-width: 1200px) {
+    z-index: 1;
+  }
+  @media (max-width: 480px) {
+    width: 108px;
+    right: -54px !important;
+    font-size: 12px;
+  }
+  &:hover {
+    background: #37dc8c;
+  }
+}
+@-moz-document url-prefix() {
+  .fileUploadInput button {
+    display: none;
+  }
+}
+
+.fileUploadInput .file-label {
+  position: absolute;
+  left: 26px;
+  top: -16px;
+  font-size: 12px;
+  line-height: 32px;
+  color: #3f2855;
+  background: #fff;
+  padding: 0 7px;
+  @include font-reg;
+}
+
+.file-return {
+  position: absolute;
+  color: #585858;
+  margin-top: 3px;
+  @include font-reg;
+  font-size: 13px;
+}
+
+.input-file {
+  background-image: none !important;
+}
+
+/*-------placeholder --------*/
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #a5a5a5;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #a5a5a5;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #a5a5a5;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #a5a5a5;
+}
+
+/*-------checkbox--------*/
+
+.styled-checkbox {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  // Box.
+  & + label:before {
+    content: "";
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border: 1px solid #655377;
+  }
+
+  // Box hover
+  //   &:hover + label:before {
+  //     background: #f35429;
+  //   }
+
+  // Box focus
+  //   &:focus + label:before {
+  //     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  //   }
+
+  // Box checked
+  &:checked + label:before {
+    background: $accent-color;
+  }
+
+  // Disabled state label.
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white,
+      4px -6px 0 white, 4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+}
+
+label.error {
+  font-size: 0;
+  width: 0;
+  height: 0;
+}
+input.error {
+  border: 1px solid #ff0101;
+  background-image: url(./img/error.svg);
+  background-repeat: no-repeat;
+  background-position: right 17px center;
+}
+
+input.valid {
+  border: 1px solid #38dd8e;
+  background-image: url(./img/valid.svg);
+  background-repeat: no-repeat;
+  background-position: right 17px center;
+}
+
+.ty {
+  @include font-reg;
+  font-size: 14px;
+  line-height: 32px;
+  color: $main-color;
+  background-image: url(./img/ty-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 0px 5px;
+  padding-left: 20px;
+  display: block;
+  margin: 30px auto;
+  text-align: center;
+  max-width: 444px;
+  display: none;
+}
+
+.ty-v {
+  &.active {
+    display: block;
+  }
+}
+
+.ty-c {
+  &.active {
+    display: block;
+  }
+}

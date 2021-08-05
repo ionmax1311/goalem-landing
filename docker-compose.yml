@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  goalem_front:
+    image: ${IMAGE}
+    container_name: goalem_front
+    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.goalem_front.rule=Host(`${URL}`)"
+      - "traefik.http.services.agoalem_front.loadbalancer.server.port=80"
+      - "traefik.http.routers.goalem_front.entrypoints=http"
+      - "traefik.http.routers.goalem_front.tls.certresolver=le"
+      - "traefik.http.routers.goalem_front.entrypoints=https"
+
+networks:
+  default:
+    external:
+      name: goalem
+

@@ -1,0 +1,69 @@
+@mixin font-black {
+  font-family: "Proxima Nova Bl";
+  font-style: normal;
+  font-weight: 900;
+}
+
+@mixin font-reg {
+  font-family: "Proxima Nova Rg";
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-semiBold {
+  font-family: "Proxima Nova Lt";
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin font-bold {
+  font-family: "Proxima Nova Th";
+  font-weight: 800;
+  font-style: normal;
+}
+
+@mixin btn-fill {
+  background: #0dbd68;
+  border-radius: 8px;
+  @include font-bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 247px;
+  height: 56px;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background: transparent;
+    color: $accent-color;
+    border: 1px solid $accent-color;
+  }
+  &:hover svg path {
+    fill: $accent-color;
+  }
+}
+
+@mixin title {
+  @include font-bold;
+  font-size: 30px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: $main-color;
+  @media (max-width: 1480px) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+@mixin subtitle {
+  @include font-bold;
+  font-size: 16px;
+  line-height: 40px;
+  text-transform: uppercase;
+
+  color: $main-color;
+  @media (max-width: 1480px) {
+    font-size: 14px;
+  }
+}
