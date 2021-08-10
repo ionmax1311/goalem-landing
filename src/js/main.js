@@ -270,6 +270,8 @@ setTimeout(() => {
     Object.keys(data[pos].inside).forEach((key) => {
       // console.log("----------", data[pos].inside[key].p);
       // console.log("----------", data[pos].inside[key].title);
+      $("#vacansie-title").text(data[pos].position);
+      $("#vacansie-description").text(data[pos].description);
 
       $(".need").append(`<span class="desc-subtitle">${
         data[pos].inside[key].title

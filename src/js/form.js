@@ -106,19 +106,19 @@ function checkFileInput(params) {
 
 $("#file-c").change(function () {
   checkFileInput();
-  console.log("change--c");
+  // console.log("change--c");
   let curF = this.files[0].size / 1024 / 1024;
   if (curF > 5) {
-    console.log(
-      "File size >>>>>>>> 5 MB--",
-      this.files[0].size / 1024 / 1024 + "MiB"
-    );
+    // console.log(
+    //   "File size >>>>>>>> 5 MB--",
+    //   this.files[0].size / 1024 / 1024 + "MiB"
+    // );
     $(".input-file-c").removeClass("valid size");
     $("#file-c").addClass("error");
     // $("#upload-c .file-return-c").text("5 MB ");
     // $(file).val(''); //for clearing with Jquery
   } else {
-    console.log("File size <<<<<<<<<< 5 MB");
+    // console.log("File size <<<<<<<<<< 5 MB");
 
     $(".input-file-c").removeClass("error");
     $(".input-file-c").addClass("valid size");
@@ -136,19 +136,19 @@ function checkFileInput2(params) {
 
 $("#file").change(function () {
   checkFileInput2();
-  console.log("change");
+  // console.log("change");
   let curF = this.files[0].size / 1024 / 1024;
   if (curF > 5) {
-    console.log(
-      "File size >>>>>>>> 5 MB--",
-      this.files[0].size / 1024 / 1024 + "MiB"
-    );
+    // console.log(
+    //   "File size >>>>>>>> 5 MB--",
+    //   this.files[0].size / 1024 / 1024 + "MiB"
+    // );
     $(".input-file-d").removeClass("valid size");
     $("#file").addClass("error");
     // $("#upload .file-return-v").text("5 MB ");
     // $(file).val(''); //for clearing with Jquery
   } else {
-    console.log("File size <<<<<<<<<< 5 MB");
+    // console.log("File size <<<<<<<<<< 5 MB");
 
     $(".input-file-d").removeClass("error");
     $(".input-file-d").addClass("valid size");

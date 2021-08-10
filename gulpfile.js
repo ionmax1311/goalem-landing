@@ -48,6 +48,10 @@ function fonts() {
   return src("src/fonts/**").pipe(dest("dist/fonts"));
 }
 
+function php() {
+  return src("src/php/**").pipe(dest("dist/php"));
+}
+
 function data() {
   return src("src/js/data.js").pipe(dest("dist"));
 }
@@ -75,6 +79,6 @@ function serve() {
   watch("src/fonts", series(fonts)).on("change", sync.reload);
 }
 
-exports.build = series(clear, scss, data, script, html, img, fonts);
-exports.serve = series(clear, scss, data, script, html, img, fonts, serve);
+exports.build = series(clear, scss, data, script, html, img, fonts, php);
+exports.serve = series(clear, scss, data, script, html, img, fonts, php, serve);
 exports.clear = clear;
