@@ -2,11 +2,11 @@ let data = {
   PRODUCT_DESIGNER: {
     icon: "./img/des-icon.svg",
     position: "Product (UI/UX) Designer",
-    description: `Мы — стартап, который разрабатывает облачный сервис для сферы
-    affiliate-маркетинга.
-    Наш продукт – это высоконагруженное SaaS решение, которое помогает игрокам на
-    рынке
-    интернет-рекламы автоматизировать и анализировать свой бизнес.`,
+    // description: `Мы — стартап, который разрабатывает облачный сервис для сферы
+    // affiliate-маркетинга.
+    // Наш продукт – это высоконагруженное SaaS решение, которое помогает игрокам на
+    // рынке
+    // интернет-рекламы автоматизировать и анализировать свой бизнес.`,
     experience: "4-5 лет",
     officeLocation: "Офис: г. Киев, Украина",
     collaborationVariant: "Офис",
@@ -42,56 +42,94 @@ let data = {
       },
     },
   },
-  FRONT1: {
+  FRONTEND_LEAD: {
     icon: "./img/js-icon.svg",
-    position: "Front-end developer Middle",
-    experience: "2-3 года",
+    position: "Front End Team Lead",
+    description: "",
+    experience: "4-5 лет",
     officeLocation: "Офис: г. Киев, Украина",
-    collaborationVariant: "Удаленное сотрудничество",
-    buttonData: "FRONT1",
+    collaborationVariant: "Офис",
+    buttonData: "FRONTEND_LEAD",
     inside: {
       paragraph1: {
-        title: "Нужно знать наш технологический стек, который включает в себя:",
-        p: ["Js", "html/css", "Angular / Vue"],
-      },
-    },
-  },
-  UI1: {
-    icon: "./img/des-icon.svg",
-    position: "UI/UX Designer Senior",
-    experience: "4-6 лет",
-    officeLocation: "Офис: г. Киев, Украина",
-    collaborationVariant: "Удаленное сотрудничество",
-    buttonData: "UI1",
-    inside: {
-      paragraph1: {
-        title: "Нужно знать наш технологический стек, который включает в себя:",
-        p: ["UI/UX", "Figma", "Photoshop"],
+        title: "Обязанности:",
+        p: [
+          "Разработка проекта с нуля;",
+          "Выбор стека технологий на которых будет основываться клиент проекта;",
+          "Реализация/внедрение задач в проект в условиях существования внешних клиентов;",
+          "Набор сотрудников команды разработки;",
+          "Менторство сотрудников команды разработки;"
+        ],
       },
       paragraph2: {
-        title: " Title-2",
-        p: ["Lorem", "Ipsum ", "is"],
+        title: "Что ждем от кандидата:",
+        p: [
+          "2+ года опыта работы с высоконагруженными проектами;",
+          "Опыт разработки StoryBook для проекта;",
+          "Лидерские качества;",
+          "Стрессоустойчивость."
+        ],
+      },
+      paragraph3: {
+        title: "Будет плюсом:",
+        p: [
+          "Опыт разрабоки дизайн-систем;",
+          "Знание рынка аффилейт/рекламных сетей;",
+          "Опыт работы с Enterpirse/SaaS продуктами."
+        ],
       },
     },
   },
+  // UI1: {
+  //   icon: "./img/des-icon.svg",
+  //   position: "UI/UX Designer Senior",
+  //   experience: "4-6 лет",
+  //   officeLocation: "Офис: г. Киев, Украина",
+  //   collaborationVariant: "Удаленное сотрудничество",
+  //   buttonData: "UI1",
+  //   inside: {
+  //     paragraph1: {
+  //       title: "Обязанности:",
+  //       p: [
+  //         ";",
+  //         "."
+  //       ],
+  //     },
+  //     paragraph2: {
+  //       title: "Что ждем от кандидата:",
+  //       p: [
+  //         ";",
+  //         ".",
+  //       ],
+  //     },
+  //     paragraph3: {
+  //       title: "Будет плюсом:",
+  //       p: [
+  //         ";",
+  //         ";",
+  //         "."
+  //       ],
+  //     },
+  //   },
+  // },
 };
 
 let dataHide = {};
 dataHide = {
-  QA2: {
-    icon: "./img/qa-icon.svg",
-    position: "QA Engineer Junior",
-    experience: "1-2 года",
-    officeLocation: "Офис: г. Киев, Украина",
-    collaborationVariant: "Офис",
-    buttonData: "QA2",
-    inside: {
-      paragraph1: {
-        title: "Нужно знать наш технологический стек, который включает в себя:",
-        p: ["UI/UX", "Figma", "Photoshop"],
-      }
-    },
-  },
+  // QA2: {
+  //   icon: "./img/qa-icon.svg",
+  //   position: "QA Engineer Junior",
+  //   experience: "1-2 года",
+  //   officeLocation: "Офис: г. Киев, Украина",
+  //   collaborationVariant: "Офис",
+  //   buttonData: "QA2",
+  //   inside: {
+  //     paragraph1: {
+  //       title: "Нужно знать наш технологический стек, который включает в себя:",
+  //       p: ["UI/UX", "Figma", "Photoshop"],
+  //     }
+  //   },
+  // },
   // FRONT2: {
   //   icon: "./img/js-icon.svg",
   //   position: "Front-end developer Junior",
