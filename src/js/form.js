@@ -6,7 +6,7 @@ $.validator.addMethod(
       return true;
     }
 
-    if (/^([a-zA-Z0-9_-]+){2,30}@([a-zA-Z0-9-]+.[a-zA-Z0-9-.]+)$/.test(value)) {
+    if (/^([a-zA-Z0-9_\-\.]+){2,30}@([a-zA-Z0-9-]+.[a-zA-Z0-9-]+)$/.test(value)) {
       return true;
     }
 
@@ -18,7 +18,6 @@ $.validator.addMethod(
 $.validator.addMethod(
   "phone",
   function (value) {
-    // return /^\+?3?8?(0(66|95|99|50|67|68|96|97|98|63|73|93|39|91|92|94)\d{7})$/.test(
     return /^\+?3?8?(0(66|95|99|50|67|68|96|97|98|63|73|93|39|91|92|94)\d{7})$/.test(
       value
     );

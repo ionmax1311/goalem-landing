@@ -187,11 +187,11 @@ ProcessForm.prototype = (function () {
               _this.getConfig().maxSizeFile * 1024 +
               "Кбайт"
           );
-        console.log(
-          "*Файл не будет отправлен, т.к. его размер больше " +
-            _this.getConfig().maxSizeFile * 1024 +
-            "Кбайт"
-        );
+        // console.log(
+        //   "*Файл не будет отправлен, т.к. его размер больше " +
+        //     _this.getConfig().maxSizeFile * 1024 +
+        //     "Кбайт"
+        // );
       } else if (
         !_validateFileExtension(
           file.name,
