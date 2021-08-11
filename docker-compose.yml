@@ -3,7 +3,7 @@ version: "3"
 services:
   goalem-landing:
     image: ${IMAGE}
-    container_name: goalem-landing
+    container_name: goalem-landing-${BRANCH}
     restart: unless-stopped
     labels:
       - "traefik.enable=true"
