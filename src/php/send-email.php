@@ -15,6 +15,7 @@ if (empty($_SERVER['HTTP_X_REQUESTED_WITH']) || $_SERVER['HTTP_X_REQUESTED_WITH'
 if ($_SERVER['REQUEST_METHOD'] != 'POST') {
   exit();
 }
+include ("mail-config.php");
 /* 1 ЭТАП - НАСТРОЙКА ПЕРЕМЕННЫХ */
 const
   IS_CHECK_CAPTCHA = false, // проверять капчу
@@ -25,13 +26,8 @@ const
   IS_SENS_FILES_AS_ATTACHMENTS = true, // необходимо ли прикреплять файлы к письму
   MAX_FILE_SIZE = 5000000, // максимальный размер файла (в байтах)
   ALLOWED_EXTENSIONS = array('pdf', 'doc'), // разрешённые расширения файлов
-  MAIL_FROM = 'no-reply@mydomain.ru', // от какого email будет отправляться письмо
-  MAIL_FROM_NAME = 'Имя_сайта', // от какого имени будет отправляться письмо
-  MAIL_SUBJECT = 'Сообщение с формы обратной связи', // тема письма
-  MAIL_ADDRESS = 'deadpool@odarq.com', // кому необходимо отправить письмо
-
   MAIL_SUBJECT_CLIENT = 'Ваше сообщение доставлено'; // настройки mail для информирования пользователя о доставке сообщения
-$uploadPath = dirname(dirname(__FILE__)) . '/uploads/'; // директория для хранения загруженных файлов
+$uploadPath = dirname(dirname(__FILE__)) . '/uploads'; // директория для хранения загруженных файлов
 
 // 2 ЭТАП - ПОДКЛЮЧЕНИЕ PHPMAILER
 use PHPMailer\PHPMailer\PHPMailer;
@@ -150,6 +146,14 @@ if ($data['result'] == 'success' && IS_SEND_MAIL == true) {
   $mail->Subject = '=?UTF-8?B?' . base64_encode(MAIL_SUBJECT) . '?=';
   $mail->Body = $bodyMail;
   $mail->addAddress(MAIL_ADDRESS);
+  $mail->isSMTP();
+  $mail->Host = MAIL_HOST;  // Specify main and backup SMTP servers
+  $mail->SMTPAuth = true;                               // Enable SMTP authentication
+  $mail->Username = SMTP_USERNAME;                 // SMTP username
+  $mail->Password = SMTP_PASSWORD;                           // SMTP password
+  $mail->SMTPSecure = SMTP_SECURE;                            // Enable TLS encryption, `ssl` also accepted
+  $mail->Port = SMTP_PORT;
+
   // прикрепление файлов к письму
   if (IS_SENS_FILES_AS_ATTACHMENTS) {
     if (isset($attachments)) {

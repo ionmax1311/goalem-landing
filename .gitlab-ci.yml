@@ -34,6 +34,7 @@ docker-build-prod:
     - ENV_FILE="$ENV_PROD"
   script:
     - echo "Build"
+    - cat $MAIL_CONFIG > ./src/php/mail-config.php
     - docker build  -t $TAG_LATEST -f Dockerfile .
   after_script:
     - docker push $TAG_LATEST
