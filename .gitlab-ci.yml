@@ -15,6 +15,7 @@ variables:
     - chmod og= $ID_RSA
     - echo "IMAGE="$TAG_LATEST > .env_prepare
     - echo "URL="$URL >> .env_prepare
+    - echo "BRANCH="$CI_COMMIT_REF_NAME >> .env_prepare
     - ssh -i $ID_RSA -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "mkdir -p ~/$CI_PROJECT_NAME"
     - ssh -i $ID_RSA -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_SERVER "mkdir -p ~/$CI_PROJECT_NAME/$CI_COMMIT_REF_NAME"
     - scp -i $ID_RSA -o StrictHostKeyChecking=no ./.env_prepare  $DEPLOY_USER@$DEPLOY_SERVER:~/$CI_PROJECT_NAME/$CI_COMMIT_REF_NAME/.env
