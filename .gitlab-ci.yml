@@ -84,7 +84,7 @@ deploy-dev:
     - URL=$URL_DEV
   << : *ssh-deploy
   only:
-    - master
+    - develop
   tags:
     - goalem-landing
 
