@@ -1,7 +1,8 @@
 stages:
   - build-prod
   - deploy-prod
-
+  - build-dev
+  - deploy-dev
 
 variables:
   TAG_LATEST: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_NAME:latest
@@ -43,6 +44,23 @@ docker-build-prod:
   tags:
     - goalem-landing
 
+docker-build-dev:
+  stage: build-dev
+  before_script:
+    - echo "Docker Login"
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - ID_RSA="$ID_RSA_DEV"
+  script:
+    - echo "Build"
+    - cat $MAIL_CONFIG > ./src/php/mail-config.php
+    - docker build  -t $TAG_LATEST -f Dockerfile .
+  after_script:
+    - docker push $TAG_LATEST
+  only:
+    - develop
+  tags:
+    - goalem-landing
+
 deploy-prod:
   image: alpine:latest
   stage: deploy-prod
@@ -53,6 +71,20 @@ deploy-prod:
   << : *ssh-deploy
   only:
     - master
+  tags:
+    - goalem-landing
+
+
+deploy-dev:
+  image: alpine:latest
+  stage: deploy-dev
+  before_script:
+    - ID_RSA=$ID_RSA_DEV
+    - DEPLOY_SERVER=$SERVER_DEV
+    - URL=$URL_DEV
+  << : *ssh-deploy
+  only:
+    - develop
   tags:
     - goalem-landing
 
