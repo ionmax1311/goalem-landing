@@ -93,6 +93,12 @@ $(".link-show-all-vac").on("click", function (e) {
 
   $(".swiper-slide-four").addClass("scrollable-content");
 
+  /*-----*/
+
+  $(".scrollable-content .vacancies").removeClass("mid");
+
+  /*-----*/
+
   $(".scrollable-content").on("mousewheel", function (e) {
     e.stopPropagation();
   });
@@ -107,6 +113,12 @@ $(".link-hide-all-vac").click(function (e) {
   $(".hide-vac").slideUp(400);
   $(this).css("display", "none");
   $(".link-show-all-vac").css("display", "block");
+
+  /*-----*/
+
+  $(".scrollable-content .vacancies").addClass("mid");
+
+  /*-----*/
 
   setTimeout(function () {
     $(".swiper-slide-four").removeClass("scrollable-content");
@@ -138,7 +150,7 @@ fileInput.addEventListener("change", function (event) {
     the_return.style.color = "red";
     this.value = null;
   } else {
-    the_return.innerHTML = this.value;
+    // the_return.innerHTML = this.value;
     the_return.style.color = "#585858";
   }
 });
@@ -159,12 +171,13 @@ buttonC.addEventListener("click", function (event) {
 
 fileInputC.addEventListener("change", function (event) {
   let FileSize = this.files[0].size / 1024 / 1024; // in MB
+  console.log("FileSize--cont", FileSize);
   if (FileSize > 5) {
     the_returnC.innerHTML = "загрузите файл размером до 5 mb";
     the_returnC.style.color = "red";
     this.value = null;
   } else {
-    the_returnC.innerHTML = this.value;
+    // the_returnC.innerHTML = this.value;
     the_returnC.style.color = "#585858";
   }
 });
