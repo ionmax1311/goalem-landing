@@ -163,15 +163,19 @@
   }
 }
 
-#four-slide .swiper-image.top {
-  @media (min-width: 1200px) and (max-width: 1480px) {
-    margin-top: 260px;
-  }
-  @media (min-width: 1480px) {
-    margin-top: 360px;
+// #four-slide .swiper-image.top {
+//   @media (min-width: 1200px) and (max-width: 1480px) {
+//     margin-top: 260px;
+//   }
+//   @media (min-width: 1480px) {
+//     margin-top: 360px;
+//   }
+// }
+.swiper-slide-five {
+  @media (max-width: 1200px) {
+    margin-bottom: 60px;
   }
 }
-
 .swiper-wrapper.container {
   &.hid {
     overflow: hidden;
