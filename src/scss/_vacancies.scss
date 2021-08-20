@@ -4,6 +4,23 @@
 
     margin-bottom: 15px;
   }
+  &-close {
+    background: #c6c6c6 !important;
+    background-image: url(../img/err-1.svg) !important;
+    background-position: right 35px center !important;
+    background-repeat: no-repeat !important;
+    pointer-events: none;
+    text-align-last: left;
+    padding-left: 35px;
+    @media (max-width: 1480px) {
+      padding-left: 15px;
+      background-position: right 15px center !important;
+    }
+
+    svg {
+      display: none !important;
+    }
+  }
   .btn-fill {
     @include btn-fill;
     max-width: 277px;
