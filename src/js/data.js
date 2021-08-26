@@ -2,15 +2,12 @@ let data = {
   PRODUCT_DESIGNER: {
     icon: "./img/des-icon.svg",
     position: "Product (UI/UX) Designer",
-    // description: `Мы — стартап, который разрабатывает облачный сервис для сферы
-    // affiliate-маркетинга.
-    // Наш продукт – это высоконагруженное SaaS решение, которое помогает игрокам на
-    // рынке
-    // интернет-рекламы автоматизировать и анализировать свой бизнес.`,
+    description: "",
     experience: "4-5 лет",
     officeLocation: "Офис: г. Киев, Украина",
     collaborationVariant: "Офис",
     buttonData: "PRODUCT_DESIGNER",
+    closeVac: true,
     inside: {
       paragraph1: {
         title: "Обязанности:",
@@ -50,7 +47,7 @@ let data = {
     officeLocation: "Офис: г. Киев, Украина",
     collaborationVariant: "Офис",
     buttonData: "FRONTEND_LEAD",
-    closeVac: true,
+    closeVac: false,
     inside: {
       paragraph1: {
         title: "Обязанности:",
