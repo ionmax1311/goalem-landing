@@ -202,7 +202,12 @@ window.onresize = function () {
 $(document).ready(function () {
   Object.keys(data).forEach((key, i) => {
     // console.log(data[key]);
-    // console.log(i);
+    // console.log(data[key].closeVac);
+
+    if (data[key].closeVac) {
+      $(this).addClass("btn-vac-close");
+      console.log();
+    }
 
     $(".vacancies-wrap .first").append(`<li>
     <div class="left">
@@ -220,7 +225,15 @@ $(document).ready(function () {
         <span class="text">${data[key].officeLocation}</span>
         <span class="text">${data[key].collaborationVariant}</span>
       </div>
-      <button type="button" class="btn-fill link-vak" data-position="${data[key].buttonData}">
+
+    
+        <button type="button" class= "${
+          data[key].closeVac
+            ? `btn-fill vacancies-close link-vak`
+            : `btn-fill link-vak`
+        }"  data-position="${data[key].buttonData}" data-position="${
+      data[key].buttonData
+    }">
         Открыть подробности
         <svg width="20" height="10" viewBox="0 0 20 10" fill="" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -228,6 +241,8 @@ $(document).ready(function () {
             fill="white" />
         </svg>
       </button>
+      
+     
     </div>
   </li>`);
   });
@@ -251,7 +266,11 @@ $(document).ready(function () {
         <span class="text">${dataHide[key].officeLocation}</span>
         <span class="text">${dataHide[key].collaborationVariant}</span>
       </div>
-      <button type="button" class="btn-fill link-vak-hide" data-position="${dataHide[key].buttonData}">
+      <button type="button" class= "${
+        dataHide[key].closeVac
+          ? `btn-fill vacancies-close link-vak-hide`
+          : `btn-fill link-vak-hide`
+      }" data-position="${dataHide[key].buttonData}">
         Открыть подробности
         <svg width="20" height="10" viewBox="0 0 20 10" fill="" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -270,6 +289,8 @@ $(document).ready(function () {
     // console.log("falser");
     $(".link-show-all-vac").css("display", "none");
   }
+
+  $(".vacancies-close").text("Вакансия закрыта");
 });
 
 // show desc vacancies click
