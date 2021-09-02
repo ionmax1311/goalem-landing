@@ -39,6 +39,42 @@ let data = {
       },
     },
   },
+  DEV_OPS: {
+    icon: "./img/devops-icon.svg",
+    position: "Devops Engineer",
+    description: "",
+    experience: "3-4 года",
+    officeLocation: "Офис: г. Киев, Украина",
+    collaborationVariant: "Офис",
+    buttonData: "DEV_OPS",
+    closeVac: false,
+    inside: {
+      paragraph1: {
+        title: "Обязанности:",
+        p: [
+          "Мониторинг/управление UNIX серверами;",
+          "Менеджмент веб-серверов apache/nginx;",
+          "Сопровождение Gitlab CI/CD;",
+          "Написание bash скриптов, Ansible.",
+        ],
+      },
+      paragraph2: {
+        title: "Что ждем от кандидата:",
+        p: [
+          "Понимание TCP/IP-сетей, HTTP/HTTPS протоколов, DNS,SMTP;",
+          "Понимание работы РСУБД (PostgreSQL, MySQL);",
+          "Знание GIT и git сервисов, gitlab;",
+          "Опыт настройки веб-серверов Apache, Nginx.",
+        ],
+      },
+      paragraph3: {
+        title: "Будет плюсом:",
+        p: [
+          "Знание стека EFK/ELK.",
+        ],
+      },
+    },
+  },
   FRONTEND_LEAD: {
     icon: "./img/js-icon.svg",
     position: "Front End Team Lead",
