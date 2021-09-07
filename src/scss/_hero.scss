@@ -173,6 +173,7 @@
     grid-column-gap: 16px;
     grid-row-gap: 16px;
     .item {
+      border-radius: 8px;
       position: relative;
       max-width: 512px;
       width: 100%;
@@ -226,20 +227,7 @@
           margin: 10px 0;
         }
       }
-      &:nth-child(1) {
-        border-radius: 8px;
-        background: linear-gradient(109.18deg, #fffcf5 0%, #fff8e6 100%);
-      }
-      &:nth-child(2) {
-        border-radius: 8px;
-        background: linear-gradient(109.18deg, #fcfbff 0%, #f7f4ff 100%);
-      }
-      &:nth-child(3) {
-        border-radius: 8px;
-        background: linear-gradient(109.18deg, #e2dff5 0%, #dacaf8 100%);
-      }
       &:last-child {
-        border-radius: 8px;
         border: 1px solid $accent-color;
         display: flex;
         justify-content: center;

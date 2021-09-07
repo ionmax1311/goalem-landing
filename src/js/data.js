@@ -8,6 +8,7 @@ let data = {
     collaborationVariant: "Офис",
     buttonData: "PRODUCT_DESIGNER",
     closeVac: true,
+    visibility: false,
     inside: {
       paragraph1: {
         title: "Обязанности:",
@@ -48,6 +49,7 @@ let data = {
     collaborationVariant: "Офис",
     buttonData: "DEV_OPS",
     closeVac: false,
+    visibility: false,
     inside: {
       paragraph1: {
         title: "Обязанности:",
@@ -84,6 +86,7 @@ let data = {
     collaborationVariant: "Офис",
     buttonData: "FRONTEND_LEAD",
     closeVac: false,
+    visibility: true,
     inside: {
       paragraph1: {
         title: "Обязанности:",
@@ -125,6 +128,7 @@ let data = {
     collaborationVariant: "Офис",
     buttonData: "FRONTEND_DEV",
     closeVac: false,
+    visibility: true,
     inside: {
       paragraph1: {
         title: "Обязанности:",
