@@ -199,12 +199,18 @@ window.onresize = function () {
 
 // load vacancies list
 
+const randomLinearGradient = () => {
+  const randomRBAColor = () => Math.round(Math.random() * 255)
+  return `linear-gradient(109.18deg, rgba(${randomRBAColor()},${randomRBAColor()},${randomRBAColor()}, 0.1), rgba(${randomRBAColor()},${randomRBAColor()},${randomRBAColor()}, 0.1))`
+}
+
 $(document).ready(function () {
-  const activeVacancies = Object.values(data).filter(item => !item.closeVac)
+
+  const activeVacancies = Object.values(data).filter(item => !item.closeVac && item.visibility)
 
   activeVacancies.forEach((vacancy, i) => {
     $(".hero-cards #link-vak-all").before(`
-    <div class="item link-vak" data-position="${vacancy.buttonData}">
+    <div class="item link-vak" data-position="${vacancy.buttonData}" style="background: ${randomLinearGradient()}">
       <div class="item-top">
         <img src="${vacancy.icon}" alt="icon">
           <div class="item-text">
