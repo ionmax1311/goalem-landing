@@ -200,10 +200,28 @@ window.onresize = function () {
 // load vacancies list
 
 $(document).ready(function () {
-  Object.keys(data).forEach((key, i) => {
-    // console.log(data[key]);
-    // console.log(data[key].closeVac);
+  const activeVacancies = Object.values(data).filter(item => !item.closeVac)
 
+  activeVacancies.forEach((vacancy, i) => {
+    $(".hero-cards #link-vak-all").before(`
+    <div class="item link-vak" data-position="${vacancy.buttonData}">
+      <div class="item-top">
+        <img src="${vacancy.icon}" alt="icon">
+          <div class="item-text">
+            <div class="item-title">${vacancy.position}</div>
+            <span>Опыт работы: ${vacancy.experience}</span>
+          </div>
+
+      </div>
+      <a href="javascript:void(0)" class="link-vak link-top" data-position="${vacancy.buttonData}">
+        Смотреть вакансию <img src="./img/arr-r-green.svg" alt="icon" class="arr-r">
+      </a>
+      <div class="number">${++i}</div>
+    </div>
+    `)
+  })
+
+  Object.keys(data).forEach((key, i) => {
     if (data[key].closeVac) {
       $(this).addClass("btn-vac-close");
       console.log();
