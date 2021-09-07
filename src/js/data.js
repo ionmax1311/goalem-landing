@@ -49,7 +49,7 @@ let data = {
     collaborationVariant: "Офис",
     buttonData: "DEV_OPS",
     closeVac: false,
-    visibility: false,
+    visibility: true,
     inside: {
       paragraph1: {
         title: "Обязанности:",
@@ -128,7 +128,7 @@ let data = {
     collaborationVariant: "Офис",
     buttonData: "FRONTEND_DEV",
     closeVac: false,
-    visibility: true,
+    visibility: false,
     inside: {
       paragraph1: {
         title: "Обязанности:",
