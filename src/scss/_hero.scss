@@ -171,6 +171,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 16px;
+    grid-row-gap: 16px;
     .item {
       position: relative;
       max-width: 512px;
@@ -234,6 +235,10 @@
         background: linear-gradient(109.18deg, #fcfbff 0%, #f7f4ff 100%);
       }
       &:nth-child(3) {
+        border-radius: 8px;
+        background: linear-gradient(109.18deg, #e2dff5 0%, #dacaf8 100%);
+      }
+      &:last-child {
         border-radius: 8px;
         border: 1px solid $accent-color;
         display: flex;
