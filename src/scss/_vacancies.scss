@@ -12,6 +12,9 @@
     pointer-events: none;
     text-align-last: left;
     padding-left: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     @media (max-width: 1480px) {
       padding-left: 15px;
       background-position: right 15px center !important;
