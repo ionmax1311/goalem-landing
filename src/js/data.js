@@ -79,7 +79,7 @@ let data = {
   },
   FRONTEND_LEAD: {
     icon: "./img/js-icon.svg",
-    position: "Front End Team Lead",
+    position: "Front End Team Lead (VUE)",
     description: "",
     experience: "4-5 лет",
     officeLocation: "Офис: г. Киев, Украина",
@@ -121,7 +121,7 @@ let data = {
   },
   FRONTEND_DEV: {
     icon: "./img/js-icon.svg",
-    position: "Front End Developer",
+    position: "Front End Developer (VUE)",
     description: "",
     experience: "3-4 года",
     officeLocation: "Офис: г. Киев, Украина",
