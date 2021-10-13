@@ -319,27 +319,51 @@ $(document).ready(function () {
 
 // show desc vacancies click
 
+const openVacancy = (vacancyName, isOpenedByClickButton) => {
+
+  if (isOpenedByClickButton) {
+    const params = new URLSearchParams(location.search);
+    params.set('vacancy', data[vacancyName].id);
+    window.history.replaceState({}, '', `${location.pathname}?${params}`);
+  }
+
+  Object.keys(data[vacancyName].inside).forEach((key) => {
+    $("#vacansie-title").text(data[vacancyName].position);
+    $("#vacansie-description").text(data[vacancyName].description);
+
+    $(".need").append(`<span class="desc-subtitle">${
+        data[vacancyName].inside[key].title
+    }</span>
+      <ul class="position-requirements">
+      ${data[vacancyName].inside[key].p.map((el) => `<li>${el}</li>`).join("")}</ul>`);
+  });
+
+  $(".desc").addClass("active");
+  $("body").addClass("hid");
+}
+
+
+const openVacancyByQueryParameter = () => {
+  const queryParameters = new URLSearchParams(window.location.search.substring(1));
+  const vacancy = queryParameters.get("vacancy");
+  if (vacancy) {
+    Object.keys(data).forEach(item => {
+      if(data[item].id === +vacancy && !data[item].closeVac) {
+        openVacancy(item)
+      }
+    })
+  }
+}
+
+setTimeout(() => {
+  openVacancyByQueryParameter()
+}, 0);
+
+
 setTimeout(() => {
   $(".link-vak").click(function () {
     let pos = $(this).data("position");
-    // console.log($(this));
-    // console.log("data[pos]---", data[pos].inside);
-
-    Object.keys(data[pos].inside).forEach((key) => {
-      // console.log("----------", data[pos].inside[key].p);
-      // console.log("----------", data[pos].inside[key].title);
-      $("#vacansie-title").text(data[pos].position);
-      $("#vacansie-description").text(data[pos].description);
-
-      $(".need").append(`<span class="desc-subtitle">${
-        data[pos].inside[key].title
-      }</span>
-      <ul class="position-requirements">
-      ${data[pos].inside[key].p.map((el) => `<li>${el}</li>`).join("")}</ul>`);
-    });
-
-    $(".desc").addClass("active");
-    $("body").addClass("hid");
+    openVacancy(pos, true)
   });
 }, 0);
 
@@ -365,6 +389,7 @@ setTimeout(() => {
 }, 0);
 
 $(".close-desc").click(function () {
+  window.history.pushState({}, document.title, '/');
   $(".need").empty();
   $(".desc").removeClass("active");
   $("body").removeClass("hid");

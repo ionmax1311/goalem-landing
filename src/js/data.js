@@ -1,5 +1,6 @@
 let data = {
   PRODUCT_DESIGNER: {
+    id: 1,
     icon: "./img/des-icon.svg",
     position: "Product (UI/UX) Designer",
     description: "",
@@ -41,6 +42,7 @@ let data = {
     },
   },
   DEV_OPS: {
+    id: 2,
     icon: "./img/devops-icon.svg",
     position: "Devops Engineer",
     description: "",
@@ -78,6 +80,7 @@ let data = {
     },
   },
   FRONTEND_LEAD: {
+    id: 3,
     icon: "./img/js-icon.svg",
     position: "Front End Team Lead (VUE)",
     description: "",
@@ -119,6 +122,7 @@ let data = {
     },
   },
   FRONTEND_DEV: {
+    id: 4,
     icon: "./img/js-icon.svg",
     position: "Front End Developer (VUE)",
     description: "",
@@ -160,6 +164,7 @@ let data = {
   },
 
   AUTOMATION_QA: {
+    id: 5,
     icon: "./img/new-qa-icon.svg",
     position: "AUTOMATION QA",
     description: "",
@@ -202,6 +207,7 @@ let data = {
   },
 
   MANUAL_QA: {
+    id: 6,
     icon: "./img/new-qa-icon.svg",
     position: "MANUAL QA",
     description: "",
