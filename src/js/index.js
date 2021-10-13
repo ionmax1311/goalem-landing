@@ -159,6 +159,17 @@ function resizeScrenn() {
         swiper.slideNext();
       });
     }
+
+
+    $(".vacancies-wrap").mouseenter(function () {
+      swiper.mousewheel.disable()
+    })
+
+
+    $(".vacancies-wrap").mouseleave(function (event) {
+      swiper.mousewheel.enable()
+    })
+
   } else {
     // swiper.destroy();  или
     // swiper.autoplay.stop();
