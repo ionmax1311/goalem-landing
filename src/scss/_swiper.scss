@@ -677,3 +677,7 @@ button.swiper-pagination-bullet {
     min-height: 660px;
   }
 }
+
+.swiper-wrapper {
+  transition: 1s !important;
+}
