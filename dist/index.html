@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="index.css">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/fav/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/fav/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/fav/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/fav/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/fav/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/fav/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/fav/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/fav/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="img/fav/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/fav/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+	<link rel="manifest" href="img/fav/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="img/fav/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<title>GOALEM</title>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-TVCMHTMYNV"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-TVCMHTMYNV');
+	</script>
+</head>
+
+<body>
+	<div class="desc">
+    <div class="container">
+        <div class="logo">
+            <img src="./img/logo.svg" alt="logo">
+        </div>
+        <a href="javascript:void(0)" class="hide-desc close-desc">
+            <img src="./img/arr-l-green.svg" alt="icon" class="arr-l">Скрыть подробности
+        </a>
+        <img src="./img/close-green.svg" alt="close" class="close-desc hide-desc-mob">
+
+        <!-- in-content -->
+        <div class="desc-in">
+            <div class="desc-list">
+                <h2 class="desc-title" id="vacansie-title"></h2>
+                <p id="vacansie-description">
+                    <!-- Мы — стартап, который разрабатывает облачный сервис для сферы
+                    affiliate-маркетинга.
+                    Наш продукт – это высоконагруженное SaaS решение, которое помогает игрокам на
+                    рынке
+                    интернет-рекламы автоматизировать и анализировать свой бизнес. -->
+                </p>
+                <div class="need"></div>
+                <div>
+                    <span class="desc-subtitle">Условия работы:</span>
+                    <ul>
+                        <li>Хорошая зарплатная вилка, в среднем на 10% выше рыночной;</li>
+                        <li>Предусмотрены бонусы для успешных результатов в работе;</li>
+                        <li>Оплата обучения и повышения квалификации;</li>
+                        <li>Комфортабельный офис в самом центре Киева;</li>
+                        <li>В офисе только команда продукта.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="desc-form">
+                <h2 class="desc-title">
+                    Заявка на собеседование
+                </h2>
+                <div class="desc-form form">
+                    <form class="form-v" action="./php/send-email.php" enctype="multipart/form-data" id="feedback-form2">
+                        <div class="form-input-wrap">
+                            <input type="text" id="name" placeholder="Иван Петров" name="name">
+                            <label for="name">Ваше имя</label>
+                        </div>
+                        <div class="form-input-wrap">
+                            <input type="text" id="email" placeholder="ivanpetrov@example.com" name="email">
+                            <label for="email">Электронный адрес</label>
+                        </div>
+                        <div class="form-input-wrap">
+                            <input type="tel" id="phone" placeholder="+38 068 888 77 00" name="phone">
+                            <label for="phone">Номер телефона</label>
+                        </div>
+
+
+                        <div class="form-input-wrap input-file-wrap fileUploadInput attachments" id="upload" data-counts="1">
+                            <span class="file-label">Ваше резюме</span>
+                            <span class="text-file">DOC. и PDF. размером дo 5мб</span>
+                            <input class="upload input-file input-file-d" id="file" required="true" type="file" accept=".doc,.pdf" name="attachment[]">
+                            <label tabindex="0" for="file" class="btn-file btn-file-d">Загрузить <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5018 11.821H9.91582H9.21945H9.06906V8.35223H10.2035C10.4912 8.35223 10.6612 8.0253 10.4912 7.78991L8.28443 4.73637C8.14385 4.54021 7.85288 4.54021 7.7123 4.73637L5.50552 7.78991C5.33551 8.0253 5.50225 8.35223 5.79322 8.35223H6.92767V11.821H6.77728H6.08092H3.08296C1.36657 11.7262 0 10.1209 0 8.38165C0 7.18182 0.650593 6.13564 1.61504 5.57005C1.52677 5.33139 1.481 5.07638 1.481 4.8083C1.481 3.58231 2.4716 2.59171 3.69759 2.59171C3.9624 2.59171 4.21741 2.63748 4.45607 2.72575C5.16551 1.22186 6.69555 0.178955 8.47405 0.178955C10.7756 0.182224 12.6718 1.94438 12.8876 4.1904C14.6563 4.49444 16 6.13237 16 7.98607C16 9.96727 14.4569 11.6837 12.5018 11.821Z" fill="#F5F5F5"/>
+                                </svg></label>
+                            <!-- <p class="file-return file-return-d"></p> -->
+                        </div>
+
+                        <button class="btn-v active btn btn-send-form" type="submit">Отправить</button>
+                        <!-- <div class="policy">
+                            Нажимая на кнопку “Отправить”, вы принимаете <a href="javascript:void(0)">условия
+                                пользования</a>
+                            сайтом и <a href="javascript:void(0)">политику конфиденциальности </a>
+                        </div> -->
+                    </form>
+
+                    <span class="ty ty-v">Спасибо, мы получили Ваше резюме и уже начали изучать его!</span>
+                </div>
+            </div>
+
+            <!-- in-content end-->
+        </div>
+    </div>
+    <div class="footer active footer-desc">
+        <div class="container">
+            <div class="footer-item">
+                <span class="title">Email:</span>
+                <a class="link email-link" href="mailto:hr@goalem.solutions">hr@goalem.solutions</a>
+                <a class="link-mob" href="mailto:hr@goalem.solutions"><img src="./img/icon-mail-c.svg" alt="icon"></a>
+            </div>
+            <div class="footer-item">
+                <span class="title">Телефон:</span>
+                <a class="link" href="tel:+380500889168">+38 (050) 088-91-68</a>
+                <a class="link-mob" href="tel:+380500889168"><img src="./img/icon-phone-c.svg" alt="icon"></a>
+            </div>
+            <div class="footer-item">
+                <span class="title">офис:</span>
+                <a href="https://goo.gl/maps/VsBNscV2bbdhghsP8" class="link" target="_blank">Украина, г. Киев, м. Лыбедская</a>
+                <a href="https://goo.gl/maps/VsBNscV2bbdhghsP8" class="link-mob" target="_blank"><img src="./img/icon-loc-c.svg" alt="icon"></a>
+            </div>
+        </div>
+    </div>
+</div>
+	<div class="menu">
+		<div class="container">
+			<div class="logo">
+				<img src="./img/logo.svg" alt="logo">
+			</div>
+			<img src="./img/close-icon.svg" alt="close" class="close-menu">
+			<div class="menu-in">
+				<ul>
+					<li data-index="0" id="one">ГЛАВНАЯ</li>
+					<li data-index="1" id="two">НАШИ РЕЗУЛЬТАТЫ</li>
+					<li data-index="2" id="three">
+						ГРАФИК РАЗВИТИЯ ПРОЕКТА
+					</li>
+					<li data-index="3" id="four">ВАКАНСИИ</li>
+					<li data-index="4" id="five">КОНТАКТЫ</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="header">
+
+			<div class="container">
+				<div class="header-in">
+					<div class="logo">
+						<img src="./img/logo.svg" alt="logo">
+					</div>
+					<div class="burger">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class="container"> -->
+		<div id="home-slider" class="responsive-swiper-holder">
+			<!-- <div class="responsive-swiper-shiv"></div> -->
+
+			<div class="swiper-container">
+				<div class="swiper-wrapper container hid">
+					<div class="swiper-slide swiper-slide-one" id="one-slide">
+						<div class="swiper-image" data-swiper-parallax-y="-35%" data-swiper-parallax-duration="600">
+							<div class="hero mid">
+    <div class="hero-top">
+        <h1>Мы ищем разработчиков!</h1>
+        <p>Мы — стартап, который разрабатывает облачный сервис для сферы
+            affiliate-маркетинга.
+            Наш продукт – это высоконагруженное SaaS решение, которое помогает игрокам на
+            рынке
+            интернет-рекламы автоматизировать и анализировать свой бизнес.</p>
+        <div class="btn-wrap">
+            <button type="button" class="btn btn-more">Подробнее о нас</button>
+
+            <button type="button" class="btn-fill btn-send-resume">Отправить резюме <svg width="20" height="10" viewBox="0 0 20 10" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.7709 4.44699C19.7706 4.44676 19.7704 4.44648 19.7702 4.44625L15.688 0.383747C15.3821 0.0794115 14.8875 0.0805441 14.5831 0.386403C14.2787 0.692224 14.2799 1.18687 14.5857 1.49125L17.3265 4.21875H0.78125C0.349766 4.21875 0 4.56851 0 5C0 5.43148 0.349766 5.78125 0.78125 5.78125H17.3264L14.5857 8.50875C14.2799 8.81312 14.2788 9.30777 14.5831 9.61359C14.8875 9.91949 15.3822 9.92054 15.688 9.61625L19.7702 5.55375C19.7704 5.55351 19.7706 5.55324 19.7709 5.55301C20.0769 5.24761 20.0759 4.75136 19.7709 4.44699Z" fill="white"/>
+            </svg></button>
+
+
+        </div>
+        <img src="./img/bg-top.svg" alt="bg" class="hero-bg">
+        <img src="./img/hero-bg-mob.svg" alt="bg" class="hero-bg-mob">
+    </div>
+    <div class="hero-cards">
+        <div id="link-vak-all" class="item link-vak-all">
+            <div>
+                <img src="./img/see-all-icon.svg" alt="icon">
+                <a href="javascript:void(0)" class="link-vak-all link-top">
+                    Смотреть все вакансии<img src="./img/arr-r-green.svg" alt="icon" class="arr-r">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-down">
+        <!-- <img src="../img/arr-down.png" alt="icon"> -->
+        <span>Листайте вниз</span>
+    </div>
+</div>
+						</div>
+					</div>
+					<div class="swiper-slide swiper-slide-two" id="two-slide">
+						<div class="swiper-image" data-swiper-parallax-y="-35%" data-swiper-parallax-duration="600">
+							<div class="result content mid">
+	<h2 class="result-title">
+		Бета-тестирование нашего продукта показало следующие результаты:
+	</h2>
+	<div class="result-wrap">
+		<div class="result-item">
+			<!-- <div class="result-item-in"> -->
+			<div class="result-item-left">
+				<span class="result-item-title"> Команды </span>
+				<div class="result-graph">
+					<div class="result-graph-in gr-1">
+						<div class="num">105</div>
+						<div class="res"></div>
+					</div>
+				</div>
+				<div class="result-graph-number">
+					
+					<div class="item">60</div>
+					<div class="item">70</div>
+					<div class="item">80</div>
+					<div class="item">90</div>
+					<div class="item">100</div>
+					<div class="item">110</div>
+					<div class="item">120</div>
+				</div>
+			</div>
+			<div class="result-item-right">
+				<span class="result-number counter-up">105</span>
+				<span class="result-desc"> Подключено команд </span>
+			</div>
+			<!-- </div> -->
+		</div>
+		<div class="result-item">
+			<!-- <div class="result-item-in"> -->
+			<div class="result-item-left">
+				<span class="result-item-title"> Лиды </span>
+				<div class="result-graph">
+					<div class="result-graph-in gr-2">
+						<div class="num">67к</div>
+						<div class="res"></div>
+					</div>
+				</div>
+				<div class="result-graph-number">
+					<div class="item">40к</div>
+					<div class="item">50к</div>
+					<div class="item">60к</div>
+					<div class="item">70к</div>
+					<div class="item">80к</div>
+				</div>
+			</div>
+			<div class="result-item-right">
+				<span class="result-number">
+					<span class="counter-up">67</span> К
+				</span>
+				<span class="result-desc"> Ежемесячный трафик </span>
+			</div>
+			<!-- </div> -->
+		</div>
+		<div class="result-item">
+			<!-- <div class="result-item-in"> -->
+			<div class="result-item-left">
+				<span class="result-item-title"> Конверсия </span>
+				<div class="result-graph">
+					<div class="result-graph-in gr-3">
+						<div class="num">4%</div>
+						<div class="res"></div>
+					</div>
+				</div>
+				<div class="result-graph-number">
+					<div class="item">2.5%</div>
+					<div class="item">3.5%</div>
+					<div class="item">4.5%</div>
+					<div class="item">5.5%</div>
+					<div class="item">6.5%</div>
+				</div>
+			</div>
+			<div class="result-item-right">
+				<span class="result-number">
+					С <span class="counter-up">1.5</span>% до
+					<span class="counter-up">4</span> %
+				</span>
+				<span class="result-desc"> Увеличили конверсию </span>
+			</div>
+			<!-- </div> -->
+		</div>
+	</div>
+</div>
+						</div>
+					</div>
+					<div class="swiper-slide swiper-slide-three" id="three-slide">
+						<div class="swiper-image" data-swiper-parallax-y="-35%" data-swiper-parallax-duration="600">
+							<div class="develop content mid">
+	<p class="develop-text">
+		Мы прошли стадию гипотез и сейчас на этапе разработки первой закрытой
+		версии продукта. Мы разработали MVP версию продукта, которой прямо
+		сейчас пользуются наши партнеры. Это помогло привлечь инвестиции и
+		развивать проект до публичной версии SaaS решения. Мы точно знаем чего
+		не хватает рынку и как мы можем помочь.
+	</p>
+	<span class="develop-subtitle"> График развития проекта </span>
+	<div class="develop-graph-wrap-project">
+		<div class="develop-status">
+			<ul>
+				<li>Вторая публичная версия</li>
+				<li>Первая публичная версия</li>
+				<li>Закрытая бета-версия</li>
+				<li>Стадия гипотез</li>
+			</ul>
+		</div>
+		<div class="develop-graph-wrap">
+			<div class="graph">
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+
+				</ul>
+				<div class="stage">
+					<span class="title">Текущий этап:</span>
+					<span class="status">Закрытая бета-версия</span>
+				</div>
+				<div class="over-hidden"></div>
+				<div class="overlay"></div>
+			</div>
+			<div class="date">
+				<ul>
+					<li>1/4 2021</li>
+					<li>2/4 2021</li>
+					<li>3/4 2021</li>
+					<li>4/4 2021</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+	<span class="develop-title">
+		Есть три группы участников, которым интересен наш продукт:
+	</span>
+	<div class="develop-group">
+		<div class="item">
+			<img src="./img/d-icon-1.svg" alt="icon">
+			<span>Рекламодатели</span>
+		</div>
+		<div class="item">
+			<img src="./img/d-icon-2.svg" alt="icon">
+			<span>Партнерские сети</span>
+		</div>
+		<div class="item">
+			<img src="./img/d-icon-3.svg" alt="icon">
+			<span>Вебмастера/команды</span>
+		</div>
+	</div>
+</div>
+						</div>
+					</div>
+					<div class="swiper-slide swiper-slide-four" id="four-slide">
+						<div class="swiper-image" data-swiper-parallax-y="-20%" data-swiper-parallax-duration="600">
+							<div class="vacancies content mid">
+	<h2 class="vacancies-title">Кого мы ищем?</h2>
+	<div class="vacancies-wrap">
+		<ul class="first">
+
+		</ul>
+		<ul class="hide-vac">
+
+		</ul>
+
+		<a href="javascript:void(0)" class="link-show-all-vac">
+			Показать все вакансии
+			<img src="./img/arr-d-green.svg" alt="icon" class="arr-d">
+		</a>
+		<a href="javascript:void(0)" class="link-hide-all-vac">
+			Скрыть все вакансии
+			<img src="./img/arr-d-green.svg" alt="icon" class="arr-d">
+		</a>
+	</div>
+
+	<h2 class="vacancies-title">Наши принципы</h2>
+
+	<div class="vacancies-bottom">
+		<p>
+			У нас все просто. Мы ищем целеустремленных и ответственных. Мы рады
+			видеть тебя в нашей компании если:
+		</p>
+		<ul class="vacancies-bottom-list">
+			<li>
+				<span class="number">1</span><span class="text">Ты самоорганизован</span>
+			</li>
+			<li>
+				<span class="number">2</span><span class="text">Не сидишь на месте и любишь развиваться</span>
+			</li>
+			<li>
+				<span class="number">3</span><span class="text">Честен</span>
+			</li>
+			<li>
+				<span class="number">4</span><span class="text">Являешься профессионалом своего направления</span>
+			</li>
+		</ul>
+	</div>
+</div>
+						</div>
+					</div>
+					<div class="swiper-slide swiper-slide-five" id="five-slide">
+						<div class="swiper-image" data-swiper-parallax-y="-20%" data-swiper-parallax-duration="600">
+							<div class="contacts content mid">
+    <div class="contacts-list">
+        <h2 class="contacts-title">
+            Наши контакты
+        </h2>
+
+
+        <div class="contacts-list-item email-wrap">
+            <span>Электронная почта: </span>
+            <a href="mailto:hr@goalem.solutions">hr@goalem.solutions</a>
+        </div>
+        <div class="contacts-list-item phone-wrap">
+            <span>Номер телефона HR-менеджера: </span>
+            <a href="tel:+380500889168">+38 (050) 088-91-68</a>
+        </div> 
+        <div class="contacts-list-item loc-wrap">
+            <span>Наш офис: </span>
+            <a href="https://goo.gl/maps/VsBNscV2bbdhghsP8" target="_blank">Украина, г. Киев, м. Лыбедская</a>
+        </div>
+
+    </div>
+    <div class="contacts-form">
+        <h2 class="contacts-title">
+            Заявка на собеседование
+        </h2>
+        <div class="contacts-form form">
+            <form class="form-c" action="./php/send-email.php" enctype="multipart/form-data" id="feedback-form">
+                <div class="form-input-wrap">
+                    <input type="text" id="name-c" placeholder="Иван Петров" name="name">
+                    <label for="name-c">Ваше имя</label>
+                </div>
+                <div class="form-input-wrap">
+                    <input type="text" id="email-c" placeholder="ivanpetrov@example.com" name="email">
+                    <label for="email-c">Электронный адрес</label>
+                </div>
+                <div class="form-input-wrap">
+                    <input type="text" id="phone-c" placeholder="+38 068 888 77 00" name="phone">
+                    <label for="phone-c">Номер телефона</label>
+                </div>
+
+
+                <div class="form-input-wrap input-file-wrap fileUploadInput attachments" id="upload-c" data-counts="1">
+                    <span class="file-label">Ваше резюме</span>
+                    <span class="text-file">DOC. и PDF. размером дo 5мб</span>
+                    <input class="upload input-file input-file-c" id="file-c" required="true" type="file" accept=".doc,.pdf" name="attachment[]">
+                    <label tabindex="0" for="file-c" class="btn-file btn-file-c">Загрузить <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.5018 11.821H9.91582H9.21945H9.06906V8.35223H10.2035C10.4912 8.35223 10.6612 8.0253 10.4912 7.78991L8.28443 4.73637C8.14385 4.54021 7.85288 4.54021 7.7123 4.73637L5.50552 7.78991C5.33551 8.0253 5.50225 8.35223 5.79322 8.35223H6.92767V11.821H6.77728H6.08092H3.08296C1.36657 11.7262 0 10.1209 0 8.38165C0 7.18182 0.650593 6.13564 1.61504 5.57005C1.52677 5.33139 1.481 5.07638 1.481 4.8083C1.481 3.58231 2.4716 2.59171 3.69759 2.59171C3.9624 2.59171 4.21741 2.63748 4.45607 2.72575C5.16551 1.22186 6.69555 0.178955 8.47405 0.178955C10.7756 0.182224 12.6718 1.94438 12.8876 4.1904C14.6563 4.49444 16 6.13237 16 7.98607C16 9.96727 14.4569 11.6837 12.5018 11.821Z" fill="#F5F5F5"/>
+                        </svg></label>
+                    <!-- <p class="file-return file-return-c"></p> -->
+                </div>
+
+                <button class="btn-cont active btn btn-send-form" type="submit">Отправить</button>
+                <!-- <div class="policy">
+                    Нажимая на кнопку “Отправить”, вы принимаете <a href="javascript:void(0)">условия пользования</a>
+                    сайтом и <a href="javascript:void(0)">политику конфиденциальности </a>
+                </div> -->
+            </form>
+            <span class="ty ty-c">Спасибо, мы получили Ваше резюме и уже начали изучать его!</span>
+        </div>
+    </div>
+</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="swiper-pagination"></div>
+
+			</div>
+		</div>
+		<!-- </div> -->
+
+		<div class="footer">
+			<div class="container">
+				<div class="footer-item">
+					<span class="title">Email:</span>
+					<a class="link email-link" href="mailto:hr@goalem.solutions">hr@goalem.solutions</a>
+					<a class="link-mob" href="mailto:hr@goalem.solutions"><img src="./img/icon-mail-c.svg" alt="icon"></a>
+
+				</div>
+				<div class="footer-item">
+					<span class="title">Телефон:</span>
+					<a class="link" href="tel:+380500889168">+38 (050) 088-91-68</a>
+					<a class="link-mob" href="tel:+380500889168"><img src="./img/icon-phone-c.svg" alt="icon"></a>
+				</div>
+				<div class="footer-item">
+					<span class="title">офис:</span>
+					<a href="https://goo.gl/maps/VsBNscV2bbdhghsP8" target="_blank" class="link">Украина, г. Киев, м. Лыбедская</a>
+					<a href="https://goo.gl/maps/VsBNscV2bbdhghsP8" class="link-mob" target="_blank"><img src="./img/icon-loc-c.svg" alt="icon"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.18.0/jquery.validate.min.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.8.5/countUp.min.js"></script>
+
+
+	<script src="data.js"></script>
+	<script src="index.js"></script>
+
+</body>
+
+</html>

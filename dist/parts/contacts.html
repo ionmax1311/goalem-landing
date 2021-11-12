@@ -1,0 +1,61 @@
+<div class="contacts content mid">
+    <div class="contacts-list">
+        <h2 class="contacts-title">
+            Наши контакты
+        </h2>
+
+
+        <div class="contacts-list-item email-wrap">
+            <span>Электронная почта: </span>
+            <a href="mailto:hr@goalem.solutions">hr@goalem.solutions</a>
+        </div>
+        <div class="contacts-list-item phone-wrap">
+            <span>Номер телефона HR-менеджера: </span>
+            <a href="tel:+380500889168">+38 (050) 088-91-68</a>
+        </div> 
+        <div class="contacts-list-item loc-wrap">
+            <span>Наш офис: </span>
+            <a href="https://goo.gl/maps/VsBNscV2bbdhghsP8" target="_blank">Украина, г. Киев, м. Лыбедская</a>
+        </div>
+
+    </div>
+    <div class="contacts-form">
+        <h2 class="contacts-title">
+            Заявка на собеседование
+        </h2>
+        <div class="contacts-form form">
+            <form class="form-c" action="./php/send-email.php" enctype="multipart/form-data" id="feedback-form">
+                <div class="form-input-wrap">
+                    <input type="text" id="name-c" placeholder="Иван Петров" name="name">
+                    <label for="name-c">Ваше имя</label>
+                </div>
+                <div class="form-input-wrap">
+                    <input type="text" id="email-c" placeholder="ivanpetrov@example.com" name="email">
+                    <label for="email-c">Электронный адрес</label>
+                </div>
+                <div class="form-input-wrap">
+                    <input type="text" id="phone-c" placeholder="+38 068 888 77 00" name="phone">
+                    <label for="phone-c">Номер телефона</label>
+                </div>
+
+
+                <div class="form-input-wrap input-file-wrap fileUploadInput attachments" id="upload-c" data-counts="1">
+                    <span class="file-label">Ваше резюме</span>
+                    <span class="text-file">DOC. и PDF. размером дo 5мб</span>
+                    <input class="upload input-file input-file-c" id="file-c" required="true" type="file" accept=".doc,.pdf" name="attachment[]">
+                    <label tabindex="0" for="file-c" class="btn-file btn-file-c">Загрузить <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.5018 11.821H9.91582H9.21945H9.06906V8.35223H10.2035C10.4912 8.35223 10.6612 8.0253 10.4912 7.78991L8.28443 4.73637C8.14385 4.54021 7.85288 4.54021 7.7123 4.73637L5.50552 7.78991C5.33551 8.0253 5.50225 8.35223 5.79322 8.35223H6.92767V11.821H6.77728H6.08092H3.08296C1.36657 11.7262 0 10.1209 0 8.38165C0 7.18182 0.650593 6.13564 1.61504 5.57005C1.52677 5.33139 1.481 5.07638 1.481 4.8083C1.481 3.58231 2.4716 2.59171 3.69759 2.59171C3.9624 2.59171 4.21741 2.63748 4.45607 2.72575C5.16551 1.22186 6.69555 0.178955 8.47405 0.178955C10.7756 0.182224 12.6718 1.94438 12.8876 4.1904C14.6563 4.49444 16 6.13237 16 7.98607C16 9.96727 14.4569 11.6837 12.5018 11.821Z" fill="#F5F5F5"/>
+                        </svg></label>
+                    <!-- <p class="file-return file-return-c"></p> -->
+                </div>
+
+                <button class="btn-cont active btn btn-send-form" type="submit">Отправить</button>
+                <!-- <div class="policy">
+                    Нажимая на кнопку “Отправить”, вы принимаете <a href="javascript:void(0)">условия пользования</a>
+                    сайтом и <a href="javascript:void(0)">политику конфиденциальности </a>
+                </div> -->
+            </form>
+            <span class="ty ty-c">Спасибо, мы получили Ваше резюме и уже начали изучать его!</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,98 @@
+<div class="desc">
+    <div class="container">
+        <div class="logo">
+            <img src="./img/logo.svg" alt="logo">
+        </div>
+        <a href="javascript:void(0)" class="hide-desc close-desc">
+            <img src="./img/arr-l-green.svg" alt="icon" class="arr-l">Скрыть подробности
+        </a>
+        <img src="./img/close-green.svg" alt="close" class="close-desc hide-desc-mob">
+
+        <!-- in-content -->
+        <div class="desc-in">
+            <div class="desc-list">
+                <h2 class="desc-title" id="vacansie-title"></h2>
+                <p id="vacansie-description">
+                    <!-- Мы — стартап, который разрабатывает облачный сервис для сферы
+                    affiliate-маркетинга.
+                    Наш продукт – это высоконагруженное SaaS решение, которое помогает игрокам на
+                    рынке
+                    интернет-рекламы автоматизировать и анализировать свой бизнес. -->
+                </p>
+                <div class="need"></div>
+                <div>
+                    <span class="desc-subtitle">Условия работы:</span>
+                    <ul>
+                        <li>Хорошая зарплатная вилка, в среднем на 10% выше рыночной;</li>
+                        <li>Предусмотрены бонусы для успешных результатов в работе;</li>
+                        <li>Оплата обучения и повышения квалификации;</li>
+                        <li>Комфортабельный офис в самом центре Киева;</li>
+                        <li>В офисе только команда продукта.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="desc-form">
+                <h2 class="desc-title">
+                    Заявка на собеседование
+                </h2>
+                <div class="desc-form form">
+                    <form class="form-v" action="./php/send-email.php" enctype="multipart/form-data" id="feedback-form2">
+                        <div class="form-input-wrap">
+                            <input type="text" id="name" placeholder="Иван Петров" name="name">
+                            <label for="name">Ваше имя</label>
+                        </div>
+                        <div class="form-input-wrap">
+                            <input type="text" id="email" placeholder="ivanpetrov@example.com" name="email">
+                            <label for="email">Электронный адрес</label>
+                        </div>
+                        <div class="form-input-wrap">
+                            <input type="tel" id="phone" placeholder="+38 068 888 77 00" name="phone">
+                            <label for="phone">Номер телефона</label>
+                        </div>
+
+
+                        <div class="form-input-wrap input-file-wrap fileUploadInput attachments" id="upload" data-counts="1">
+                            <span class="file-label">Ваше резюме</span>
+                            <span class="text-file">DOC. и PDF. размером дo 5мб</span>
+                            <input class="upload input-file input-file-d" id="file" required="true" type="file" accept=".doc,.pdf" name="attachment[]">
+                            <label tabindex="0" for="file" class="btn-file btn-file-d">Загрузить <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5018 11.821H9.91582H9.21945H9.06906V8.35223H10.2035C10.4912 8.35223 10.6612 8.0253 10.4912 7.78991L8.28443 4.73637C8.14385 4.54021 7.85288 4.54021 7.7123 4.73637L5.50552 7.78991C5.33551 8.0253 5.50225 8.35223 5.79322 8.35223H6.92767V11.821H6.77728H6.08092H3.08296C1.36657 11.7262 0 10.1209 0 8.38165C0 7.18182 0.650593 6.13564 1.61504 5.57005C1.52677 5.33139 1.481 5.07638 1.481 4.8083C1.481 3.58231 2.4716 2.59171 3.69759 2.59171C3.9624 2.59171 4.21741 2.63748 4.45607 2.72575C5.16551 1.22186 6.69555 0.178955 8.47405 0.178955C10.7756 0.182224 12.6718 1.94438 12.8876 4.1904C14.6563 4.49444 16 6.13237 16 7.98607C16 9.96727 14.4569 11.6837 12.5018 11.821Z" fill="#F5F5F5"/>
+                                </svg></label>
+                            <!-- <p class="file-return file-return-d"></p> -->
+                        </div>
+
+                        <button class="btn-v active btn btn-send-form" type="submit">Отправить</button>
+                        <!-- <div class="policy">
+                            Нажимая на кнопку “Отправить”, вы принимаете <a href="javascript:void(0)">условия
+                                пользования</a>
+                            сайтом и <a href="javascript:void(0)">политику конфиденциальности </a>
+                        </div> -->
+                    </form>
+
+                    <span class="ty ty-v">Спасибо, мы получили Ваше резюме и уже начали изучать его!</span>
+                </div>
+            </div>
+
+            <!-- in-content end-->
+        </div>
+    </div>
+    <div class="footer active footer-desc">
+        <div class="container">
+            <div class="footer-item">
+                <span class="title">Email:</span>
+                <a class="link email-link" href="mailto:hr@goalem.solutions">hr@goalem.solutions</a>
+                <a class="link-mob" href="mailto:hr@goalem.solutions"><img src="./img/icon-mail-c.svg" alt="icon"></a>
+            </div>
+            <div class="footer-item">
+                <span class="title">Телефон:</span>
+                <a class="link" href="tel:+380500889168">+38 (050) 088-91-68</a>
+                <a class="link-mob" href="tel:+380500889168"><img src="./img/icon-phone-c.svg" alt="icon"></a>
+            </div>
+            <div class="footer-item">
+                <span class="title">офис:</span>
+                <a href="https://goo.gl/maps/VsBNscV2bbdhghsP8" class="link" target="_blank">Украина, г. Киев, м. Лыбедская</a>
+                <a href="https://goo.gl/maps/VsBNscV2bbdhghsP8" class="link-mob" target="_blank"><img src="./img/icon-loc-c.svg" alt="icon"></a>
+            </div>
+        </div>
+    </div>
+</div>
